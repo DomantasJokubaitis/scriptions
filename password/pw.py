@@ -1,9 +1,11 @@
+#! python3
+
 import sys
 import json
 from pathlib import Path
 
 
-path = Path("password/data.json")
+path = Path("C:/Users/doman/Desktop/scriptions/password/data.json")
 
 if path.exists():
     content = path.read_text()
