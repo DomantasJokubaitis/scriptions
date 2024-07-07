@@ -10,4 +10,4 @@ if not answer:
     print("Nothing found.")
 
 for i in answer:
-    print(f"{i}", end=" | ")
+    print(i)
