@@ -1,4 +1,5 @@
 import re
+import random
 
 path = "quizz\\untidycapitals.txt"
 
@@ -7,8 +8,6 @@ with open(path, "r") as f:
 
 blud = re.compile(r'[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{4,105}?|[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{0,105}?|[A-Za-z]{4,150}')
 geo_list = blud.findall(text)
-
-print(geo_list)
 
 states_dict = {}
 
@@ -19,7 +18,19 @@ while state <= 98 and capital <= 100:
     state += 2
     capital += 2
 
-for key, value in states_dict.items():
-    print(key, value)
+states = [key for key in states_dict.keys()]
+
+questions = []
+
+for i in range(50):
+    question = f"What is the capital of {states[i]}?"
+    questions.append(question)
+
+
+
+
+
+
+
 
 
