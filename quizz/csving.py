@@ -1,5 +1,6 @@
 import re
 import random
+import os
 
 path = "quizz\\untidycapitals.txt"
 
@@ -18,13 +19,50 @@ while state <= 98 and capital <= 100:
     state += 2
     capital += 2
 
-states = [key for key in states_dict.keys()]
+states, capitals = [key for key in states_dict.keys()], [value for value in states_dict.values()]
 
-questions = []
+def logic():
 
-for i in range(50):
-    question = f"What is the capital of {states[i]}?"
-    questions.append(question)
+    question_number = 1
+    control = list(range(50))
+
+    while control:
+        number = random.choice(control)
+        control.remove(number)
+        question = f"{question_number}. What is the capital of {states[number]}?"
+        answers = []
+        answer = capitals[number]
+        answers.append(answer)
+        fake_ans_choices = (list(range(50)))
+
+        i = 3
+        while i > 0:
+            fake_ans_num = random.choice(fake_ans_choices)
+            fake_ans_choices.remove(fake_ans_num)
+            fake_answer = capitals[fake_ans_num]
+            answers.append(fake_answer)
+            i -= 1
+        random.shuffle(answers)
+
+
+        answer_choices = ["A", "B", "C", "D"]
+        answer_number = 0
+        for a in answers:
+            print(f"{answer_choices[answer_number]}. {a}")
+            answer_number += 1
+        question_number += 1
+
+path2 = "quizz\\"
+for i in range(1, 36):
+    filename = f"number{i}"
+    new = os.path.join(path, filename + ".txt")
+    logic()
+    with open(new, "w") as n:
+        n.write()
+
+
+
+
 
 
 
