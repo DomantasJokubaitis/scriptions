@@ -110,4 +110,8 @@ if __name__ == "__main__":
 #implement delete function by name
 #implement detail update function 
 
+#implement search function by name
+#implement delete function by name
+#implement detail update function 
+
 
