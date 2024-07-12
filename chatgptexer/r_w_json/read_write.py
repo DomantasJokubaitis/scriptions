@@ -39,12 +39,12 @@ def main():
             email = input("Invalid email, try again: ")
         new_dict["name"], new_dict["age"], new_dict["email"] = name, age, email
         contents.append(new_dict)
-    elif "modify" in wish:
+    """elif "modify" in wish:
         change_person = input("Enter the person's name to modify: ")
         for dictionary in contents:
             if dictionary[change_person]:
                 #user should be able to enter what info to modify, like only age or age and mail
-
+    """
     new_text = json.dumps(contents)
     path.write_text(new_text)
 
