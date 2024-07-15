@@ -5,26 +5,33 @@ import os
 import sys
 
 path = Path("multiclipboard\\jason.json")
-if not path.exists():
+
+if not path.parent.exists():
     os.makedirs("multiclipboard\\")
+if not path.exists():
     my_dict = {}
-if path.exists():
-    content = path.read_text()
-    my_dict = json.loads(content)
+else:
+    try:
+        content = path.read_text()
+        my_dict = json.loads(content)
+    except json.JSONDecodeError:
+        my_dict = {}
 
 def load_json():
-    content = path.read_text()
-    my_dict = json.loads(content)
-    x = ', '
-    y = x.join(my_dict)
-    pyperclip.copy(y)
+    try:
+        content = path.read_text()
+        my_dict = json.loads(content)
+        copied = ",".join(my_dict.keys())
+        pyperclip.copy(copied)
+    except json.JSONDecodeError:
+        return {}
 
 def store_json():
     contents = json.dumps(my_dict)
     path.write_text(contents)
 
 def ask_input():
-    x = input("Enter: ")
+    x = input("save/list/exit: ")
     return x
 
 
