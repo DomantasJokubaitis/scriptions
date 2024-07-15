@@ -20,9 +20,7 @@ for full_path in full_paths:
     with open(full_path, "r", encoding="utf-8") as f:
         for line in f:
             surname = regex.search(line)
-            if surname == "priv":
-                print("yo")
-            elif surname and surname != "priv":
+            if surname:
                 surnames.append(surname.group())
 
 
