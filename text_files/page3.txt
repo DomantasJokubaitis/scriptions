@@ -1,0 +1,100 @@
+201 	S. LUKAŠEVIČ 	2004 	9308976288 	privalomoji karo tarnyba atidėta
+202 	J. TOLOČKA 	2000 	7532433603 	šaukimo procedūros vykdomos, sekite nurodymus
+203 	G. VALICKIJ 	2001 	2117424877 	šaukimo procedūros vykdomos, sekite nurodymus
+204 	K. JIEVALTAS 	2004 	7852420673 	privalomoji karo tarnyba atidėta
+205 	V. JOMANTAS 	2002 	7726457505 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+206 	M. GERASIMOVIČ 	2002 	9913231658 	privalomoji karo tarnyba atidėta
+207 	S. LEVICKAS 	2002 	7759453088 	šaukimo procedūros vykdomos, sekite nurodymus
+208 	A. SLAVINSKAS 	2002 	8239712488 	privalomoji karo tarnyba atidėta
+209 	A. BAGDONAVIČIUS 	2003 	1589627319 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+210 	K. ANDREJEV 	2002 	4644691608 	šaukimo procedūros vykdomos, sekite nurodymus
+211 	K. ANDRUŠAITIS 	2003 	2890368790 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+212 	A. GUDALEVIČ 	2004 	3493222059 	atlieka tarnybą
+213 	R. ILKEVIČ 	2005 	1557841784 	atlieka tarnybą
+214 	E. NARKEVIČIUS 	2002 	1708132370 	privalomoji karo tarnyba atidėta
+215 	N. BINGELIS 	2002 	5523598497 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+216 	D. ČEPAS 	2002 	9687804110 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+217 	A. SMIRNOVAS 	2000 	7679828021 	iki 2024-07-25 09:00 privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+218 	D. JUŠKA 	2003 	7123225595 	privalomoji karo tarnyba atidėta
+219 	A. ZOLUMSKIS 	2005 	8665439355 	privalomoji karo tarnyba atidėta
+220 	M. RADIONOV 	2005 	6422248654 	2024-07-12 08:00 privalote atvykti pasitikrinti sveikatos (Ignalinos KPKP)
+221 	M. DUMČIUS 	2004 	7742008677 	privalomoji karo tarnyba atidėta
+222 	M. FROLOV 	2001 	4206002358 	privalomoji karo tarnyba atidėta
+223 	T. JUNDA 	2001 	2420518949 	privalomoji karo tarnyba atidėta
+224 	D. BELOGUBOV 	2005 	7270253340 	privalomoji karo tarnyba atidėta
+225 	S. LUKOIT 	2002 	3412784953 	šaukimo procedūros vykdomos, sekite nurodymus
+226 	D. ČERNAKOV 	2004 	8839221756 	atlieka tarnybą
+227 	D. GOMZA 	2003 	4610508898 	privalote skubiai susisiekti arba atvykti į Ignalinos KPKP
+228 	E. BUČMYS 	1998 	7635319763 	iki 2024-07-18 privalote susisiekti ir pateikti savo duomenis Vilniaus KPKP
+229 	E. SVIRBUTOVIČ 	1998 	9651167276 	privalomoji karo tarnyba atidėta
+230 	T. UTKEVIČIUS 	2003 	8839184507 	privalomoji karo tarnyba atidėta
+231 	M. KADUŠKEVIČ 	2004 	9075924438 	atlieka tarnybą
+232 	D. PILYPAS 	2003 	8210099065 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+233 	K. KATILIUS 	2002 	6973805302 	privalomoji karo tarnyba atidėta
+234 	A. HAJJAR 	2002 	1221016270 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+235 	A. SKIAUTERĖ 	1999 	9241525855 	privalomoji karo tarnyba atidėta
+236 	K. ČIČINADZĖ 	2003 	7351339910 	privalomoji karo tarnyba atidėta
+237 	L. LILEIKIS 	1999 	7331745942 	iki 2024-07-18 privalote susisiekti ir pateikti savo duomenis Vilniaus KPKP
+238 	R. KARČEVSKIJ 	2004 	5804378729 	privalomoji karo tarnyba atidėta
+239 	E. SASNAUSKAS 	2002 	5279953444 	šaukimo procedūros vykdomos, sekite nurodymus
+240 	B. ROLIK 	2003 	7162430235 	šaukimo procedūros vykdomos, sekite nurodymus
+241 	A. JAKUBAITIS 	2005 	8429526369 	privalomoji karo tarnyba atidėta
+242 	K. PETKEVIČ 	2002 	6527185846 	privalomoji karo tarnyba atidėta
+243 	V. SUCHANKOVAS 	2004 	7457858431 	privalomoji karo tarnyba atidėta
+244 	A. ŽILEVIČIUS 	2001 	4214949911 	privalomoji karo tarnyba atidėta
+245 	A. KAZLOVSKIJ 	2004 	5092749935 	šaukimo procedūros vykdomos, sekite nurodymus
+246 	A. LAPINSKAS 	2001 	8423475441 	privalomoji karo tarnyba atidėta
+247 	M. BONDARENKO 	2001 	4942524822 	šaukimo procedūros vykdomos, sekite nurodymus
+248 	E. KUZNECOVAS 	2001 	7438108474 	atlieka tarnybą
+249 	R. ŽINTIKAS 	2004 	8723741208 	privalomoji karo tarnyba atidėta
+250 	T. BRATČIKOV 	2000 	9279464918 	privalomoji karo tarnyba atidėta
+251 	A. LAPINSKAS 	1998 	5796480738 	iki 2024-09-09 privalote susisiekti ir pateikti savo duomenis Vilniaus KPKP
+252 	K. PRIEVELIS 	2003 	5921846788 	privalomoji karo tarnyba atidėta
+253 	R. BALČIŪNAS 	2000 	3386555701 	šaukimo procedūros vykdomos, sekite nurodymus
+254 	J. BRIDIKIS 	2004 	3795396100 	2024-09-02 08:00 privalote atvykti į Vilniaus KPKP
+255 	D. SAVICKIJ 	2004 	7744536498 	iki 2024-07-15 privalote susisiekti ir pateikti savo duomenis Vilniaus KPKP
+256 	S. ABBAS 	2005 	7507592716 	privalomoji karo tarnyba atidėta
+257 	D. MICHALČONOK 	2000 	6825487252 	šaukimo procedūros vykdomos, sekite nurodymus
+258 	V. VARNAS 	2002 	9931180964 	iki 2024-08-05 privalote susisiekti ir pateikti savo duomenis Vilniaus KPKP
+259 	P. ŠPOKAS 	2003 	6854565323 	privalomoji karo tarnyba atidėta
+260 	G. RAMELIS 	2001 	9567769388 	iki 2024-09-06 privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo (KMEKP Panevėžyje)
+261 	V. BURKA 	1998 	7044834539 	atlieka tarnybą
+262 	D. LISOVSKIJ 	2001 	7784807061 	2024-08-30 09:00 privalote atvykti pasitikrinti sveikatos (KMEKP Vilniuje)
+263 	O. UČKURONIS 	2004 	6632004332 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+264 	R. RAČKAUSKAS 	2000 	7370233186 	privalomoji karo tarnyba atidėta
+265 	A. BISTRAS 	2004 	2622613965 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+266 	M. ANDRULIONIS 	2004 	3850279911 	privalomoji karo tarnyba atidėta
+267 	O. JEVTUŠENKO 	2004 	3674084242 	privalomoji karo tarnyba atidėta
+268 	J. TAMOŠAUSKAS 	1998 	6112482951 	privalomoji karo tarnyba atidėta
+269 	S. SUCKEL 	2001 	2223231188 	šaukimo procedūros vykdomos, sekite nurodymus
+270 	J. BABELIS 	2004 	4787687193 	privalomoji karo tarnyba atidėta
+271 	O. MALINAUSKAS 	2002 	1104219297 	atlieka tarnybą
+272 	L. ALEINIKOVAS 	2003 	3029066560 	iki 2024-07-24 privalote susisiekti ir pateikti savo duomenis Vilniaus KPKP
+273 	A. KLIMAŠAUSKAS 	2000 	1047299484 	privalomoji karo tarnyba atidėta
+274 	T. KONIAJEV 	2003 	8875416064 	privalomoji karo tarnyba atidėta
+275 	D. DAKŠEVIČ 	2005 	9075291160 	privalomoji karo tarnyba atidėta
+276 	D. ANKUDOVIČIUS 	2003 	4957662415 	privalomoji karo tarnyba atidėta
+277 	L. JONAITIS 	2003 	5889214688 	privalomoji karo tarnyba atidėta
+278 	D. OŽIŪNAS 	1999 	9614124468 	privalomoji karo tarnyba atidėta
+279 	G. DUŠKINAS 	2003 	1047769988 	privalomoji karo tarnyba atidėta
+280 	T. JAMANTAS 	2003 	2523985074 	privalomoji karo tarnyba atidėta
+281 	M. BŪGA 	2000 	6123938142 	privalomoji karo tarnyba atidėta
+282 	J. MALINAUSKAS 	2003 	2485590148 	privalomoji karo tarnyba atidėta
+283 	M. MEŠKAUSKAS 	1999 	2632048482 	privalomoji karo tarnyba atidėta
+284 	A. KAULINIS 	2000 	1078462360 	privalomoji karo tarnyba atidėta
+285 	K. STIRBYS 	2004 	5038843030 	privalomoji karo tarnyba atidėta
+286 	M. VALECKAS 	2005 	8867874579 	privalomoji karo tarnyba atidėta
+287 	G. SONGAILA 	2001 	6048726955 	privalomoji karo tarnyba atidėta
+288 	T. BALCEVIČ 	2004 	7411593284 	privalomoji karo tarnyba atidėta
+289 	T. ZAREMBA 	1998 	7683746861 	šaukimo procedūros vykdomos, sekite nurodymus
+290 	L. KAZLAUSKAS 	2002 	1063104223 	iki 2024-07-16 privalote susisiekti ir pateikti savo duomenis Trakų KPKP
+291 	J. RUDŽIONIS 	2003 	8260828890 	privalomoji karo tarnyba atidėta
+292 	R. BAČKUS 	2002 	8925839059 	privalomoji karo tarnyba atidėta
+293 	D. RAMONAS 	2001 	8932320207 	privalomoji karo tarnyba atidėta
+294 	G. BUDREVIČIUS 	2002 	9512659572 	privalomoji karo tarnyba atidėta
+295 	E. BARANAUSKAS 	2002 	9690437539 	privalomoji karo tarnyba atidėta
+296 	R. KOLESINSKI 	2005 	9676374778 	privalomoji karo tarnyba atidėta
+297 	T. ČALKINAS 	2003 	2000017453 	privalomoji karo tarnyba atidėta
+298 	A. KELPŠA 	2001 	8657196777 	iki 2024-07-19 privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
+299 	N. PIEČIUKAITIS 	2001 	9517626449 	privalomoji karo tarnyba atidėta
+300 	A. AKSIUTOVAS 	2001 	5485144893 	privalote skubiai susisiekti arba atvykti į Vilniaus KPKP
