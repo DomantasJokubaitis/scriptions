@@ -17,11 +17,6 @@ else:
     path.write_text(content)
 
 
-def asking():
-    want = str(input("Enter the application's name: "))
-    retrieve_data(want)
-    return want
-
 def retrieve_data(want):
     content = path.read_text()
     data = json.loads(content)
@@ -38,19 +33,27 @@ def retrieve_data(want):
 def new_data(response, want):
     
     if response == "yes" or response == "y":
+        infodict = {}
         mail = str(input("Enter the accounts mail: "))
         password = str(input("Enter the accounts password: "))
-        infodict = {}
-        infodict["mail"] = mail
-        infodict["password"] = password
+        infodict["mail"], infodict["password"] = mail, password
         data[want] = infodict
+
         content = json.dumps(data)
         path.write_text(content)
+
         print("Database updated! ")
-        asking()
+        main()
+
     if response == "no" or response == "n":
         print("Exiting...")
         sys.exit()
 
-asking()
+def main():
+    want = str(input("Enter the account's name: "))
+    retrieve_data(want)
+    return want
+
+if __name__ == "__main__":
+    main()
 

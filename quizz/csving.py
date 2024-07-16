@@ -59,17 +59,21 @@ def logic():
         question_number += 1
     return whole_question
 
-logic()
 
+def main():
 
-path2 = "quizz\\"
-for i in range(1, 36):
-    filename = f"quiz_number{i}"
-    new = os.path.join(path2, filename + ".txt")
-    quiz = logic()
-    with open(new, "w") as n:
-        for item in quiz:
-            n.write(f"{item}\n")
+    path2 = "quizz\\"
+    target = int(input("How many quizes would you like prepared? "))
+    for i in range(1, target+1):
+        filename = f"quiz_number{i}"
+        new = os.path.join(path2, filename + ".txt")
+        quiz = logic()
+        with open(new, "w") as n:
+            for item in quiz:
+                n.write(f"{item}\n")
+            
+if __name__ == "__main__":
+    main()
 
 
 
