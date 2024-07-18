@@ -9,7 +9,7 @@ path1 = "quizz\\untidycapitals.txt"
 with open(path1, "r") as f:
     text = f.read()
 
-regex = re.compile(r'[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{4,105}?|[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{0,105}?|[A-Za-z]{4,150}')
+regex = re.compile(r'\S[a-zA-Z]+\s?[a-zA-Z]+\s?[A-Za-z]+?\b')
 states_capitals_list = regex.findall(text)
 
 states, capitals = [], []
@@ -35,7 +35,8 @@ def logic():
         answers.append(capitals[number])
 
         # chooses three random untrue answers from leftover states, appends them to an answer list, shuffles it
-        answers_fill = (list(range(50)))
+        answers_fill = list(range(50))
+        answers_fill.remove(number)
         for _ in range(3):
             fake_ans_num = random.choice(answers_fill)  
             answers_fill.remove(fake_ans_num)
