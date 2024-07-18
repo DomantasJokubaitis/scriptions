@@ -9,15 +9,15 @@ path1 = "quizz\\untidycapitals.txt"
 with open(path1, "r") as f:
     text = f.read()
 
-blud = re.compile(r'[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{4,105}?|[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{0,105}?|[A-Za-z]{4,150}')
-geo_list = blud.findall(text)
+regex = re.compile(r'[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{4,105}?|[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{0,105}?|[A-Za-z]{4,150}')
+states_capitals_list = regex.findall(text)
 
 states_dict = {}
 
 state, capital = 0, 1
 
 while state <= 98 and capital <= 100:
-    states_dict[geo_list[state]] = geo_list[capital]
+    states_dict[states_capitals_list[state]] = states_capitals_list[capital]
     state += 2
     capital += 2
 
@@ -35,20 +35,17 @@ def logic():
         question = f"{question_number}. What is the capital of {states[number]}?"
         whole_question.append(question)
         answers = []
-        answer = capitals[number]
-        answers.append(answer)
+        answers.append(capitals[number])
 
+
+        #chooses three random untrue answers from leftover states
         fake_ans_choices = (list(range(50)))
         fake_ans_choices.remove(number)
-        i = 3
-        while i > 0:
-            fake_ans_num = random.choice(fake_ans_choices)
+        for i in range(3):
+            fake_ans_num = random.choice(fake_ans_choices)  
             fake_ans_choices.remove(fake_ans_num)
-            fake_answer = capitals[fake_ans_num]
-            answers.append(fake_answer)
-            i -= 1
+            answers.append(capitals[fake_ans_num])
         random.shuffle(answers)
-
 
         answer_choices = ["A", "B", "C", "D"]
         answer_number = 0
