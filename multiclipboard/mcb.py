@@ -35,35 +35,38 @@ def ask_input():
     return x
 
 
+def main():
 
-text = pyperclip.paste()
-wish = ask_input()
+    text = pyperclip.paste()
+    wish = ask_input()
+    while True:
 
-while True:
+        if "save" in wish:
+            wish = wish.removeprefix("save ")
+            my_dict[wish] = text
+            print(my_dict)
+            store_json()
+            wish = ask_input()
 
-    if "save" in wish:
-        wish = wish.removeprefix("save ")
-        my_dict[wish] = text
-        print(my_dict)
-        store_json()
-        wish = ask_input()
+        elif "list" in wish:
+            load_json()
+            wish = ask_input()
+            
 
-    elif "list" in wish:
-        load_json()
-        wish = ask_input()
-        
+        elif "exit" in wish:
+            print("Exiting...")
+            sys.exit()
 
-    elif "exit" in wish:
-        print("Exiting...")
-        sys.exit()
+        elif wish in my_dict.keys():
+            pyperclip.copy(my_dict[wish])
+            wish = ask_input()
 
-    elif wish in my_dict.keys():
-        pyperclip.copy(my_dict[wish])
-        wish = ask_input()
+        else:
+            print("Function unavailable")
+            wish = ask_input()
 
-    else:
-        print("Function unavailable")
-        wish = ask_input()
+if __name__ == "__main__":
+    main()
 
 
 
