@@ -12,49 +12,44 @@ with open(path1, "r") as f:
 regex = re.compile(r'[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{4,105}?|[a-zA-Z]{2,100}\s[a-zA-Z]{2,150}\s?[A-Za-z]{0,105}?|[A-Za-z]{4,150}')
 states_capitals_list = regex.findall(text)
 
-states_dict = {}
+states, capitals = [], []
 
-state, capital = 0, 1
+for s in range(0, 99, 2):
+    states.append(states_capitals_list[s])
 
-while state <= 98 and capital <= 100:
-    states_dict[states_capitals_list[state]] = states_capitals_list[capital]
-    state += 2
-    capital += 2
-
-states, capitals = [key for key in states_dict.keys()], [value for value in states_dict.values()]
+for c in range(1, 100, 2):
+    capitals.append(states_capitals_list[c]) 
 
 def logic():
 
-    question_number = 1
-    control = list(range(50))
-    whole_question = []
+    quiz, question_number, control = [], 1, list(range(50))
 
     while control:
+
+        # makes a random question, appends true answer to an answer list
         number = random.choice(control)
         control.remove(number)
         question = f"{question_number}. What is the capital of {states[number]}?"
-        whole_question.append(question)
+        quiz.append(question)
         answers = []
         answers.append(capitals[number])
 
-
-        #chooses three random untrue answers from leftover states
-        fake_ans_choices = (list(range(50)))
-        fake_ans_choices.remove(number)
-        for i in range(3):
-            fake_ans_num = random.choice(fake_ans_choices)  
-            fake_ans_choices.remove(fake_ans_num)
+        # chooses three random untrue answers from leftover states, appends them to an answer list, shuffles it
+        answers_fill = (list(range(50)))
+        for _ in range(3):
+            fake_ans_num = random.choice(answers_fill)  
+            answers_fill.remove(fake_ans_num)
             answers.append(capitals[fake_ans_num])
         random.shuffle(answers)
 
-        answer_choices = ["A", "B", "C", "D"]
-        answer_number = 0
+        # makes formatted answers and appends them to the quiz
+        answer_choices, answer_number = ["A", "B", "C", "D"], 0
         for a in answers:
             format_answer = (f"{answer_choices[answer_number]}. {a}")
-            whole_question.append(format_answer)
+            quiz.append(format_answer)
             answer_number += 1
         question_number += 1
-    return whole_question
+    return quiz
 
 
 def main():
@@ -63,9 +58,9 @@ def main():
     target = int(input("How many quizes would you like prepared? "))
     for i in range(1, target+1):
         filename = f"quiz_number{i}"
-        new = os.path.join(path2, filename + ".txt")
+        new_filename = os.path.join(path2, filename + ".txt")
         quiz = logic()
-        with open(new, "w") as n:
+        with open(new_filename, "w") as n:
             for item in quiz:
                 n.write(f"{item}\n")
             
