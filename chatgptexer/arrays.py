@@ -45,7 +45,8 @@ def menu():
         print("Invalid command! ")
         menu()
     while choice < 1 or choice > 3:
-        choice = int(input("Invalid command, try again: "))
+        print("Invalid command! ")
+        menu()
     match choice:
         case 1:
             adding()
