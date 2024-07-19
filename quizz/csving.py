@@ -37,21 +37,19 @@ def logic():
         # chooses three random untrue answers from leftover states, appends them to an answer list, shuffles it
         answers_fill = list(range(50))
         answers_fill.remove(number)
-        for _ in range(3):
-            fake_ans_num = random.choice(answers_fill)  
-            answers_fill.remove(fake_ans_num)
-            answers.append(capitals[fake_ans_num])
+        fake_ans_num = random.sample(answers_fill, 3)
+        for o in fake_ans_num:  
+            answers.append(capitals[o])
         random.shuffle(answers)
 
         # makes formatted answers and appends them to the quiz
-        answer_choices, answer_number = ["A", "B", "C", "D"], 0
+        answer_choices = iter(["A", "B", "C", "D"])
         for a in answers:
-            format_answer = (f"{answer_choices[answer_number]}. {a}")
+            format_answer = (f"{next(answer_choices)}. {a}")
             quiz.append(format_answer)
-            answer_number += 1
+
         question_number += 1
     return quiz
-
 
 def main():
 
@@ -67,9 +65,6 @@ def main():
             
 if __name__ == "__main__":
     main()
-
-
-
 
 
 
