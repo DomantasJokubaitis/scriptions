@@ -7,7 +7,7 @@ with open(path, "r") as f:
 
 def main():
 
-    phone_num_regex = re.compile(r'\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}')
+    phone_num_regex = re.compile(r'\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}')
     answer = phone_num_regex.findall(text)
     print(answer)
 
