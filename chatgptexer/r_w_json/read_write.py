@@ -5,7 +5,7 @@ import re
 
 path = Path("chatgptexer\\r_w_json\\data.json")
 
-regex = re.compile(r"[^\s,+-@]+\@[^\s,+-@]+\.[^\s,+-@]")
+regex = re.compile(r"[\w.]+@[\w.]+")
 
 def loading():
     if path.exists():
@@ -36,7 +36,7 @@ def new_email_address():
 def new_age():
     while True:
         age = int(input("Enter a new age: "))
-        if age < 120 and age > 0:
+        if 0 < age < 120:
             return age     
         else:
             continue
@@ -79,8 +79,6 @@ def modifying():
         print("Person was not found. ")
 
     
-    
-
 def main():
     
     contents = loading()
@@ -88,8 +86,7 @@ def main():
         contents = []
 
     while True:
-    
-            
+        
         new_dict = {}
         commands = ("add", "search", "modify", "delete", "exit")
         wish = input("Add | Search | Modify | Delete | Exit : ").lower()
