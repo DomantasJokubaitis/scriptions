@@ -5,7 +5,7 @@ dir_path = Path("yatdl")
 file_path = dir_path / "info.json"
 dir_path.mkdir(parents=True, exist_ok=True)
 
-def save_json():
+def save_json(info):
     """Saves contents to a JSON file"""
 
     with open(file_path, "w") as f:
@@ -24,11 +24,11 @@ def load_json():
 
 if not file_path.exists():
     info = {}
-    save_json()
+    save_json(info)
 else:
     info = load_json()
 
-def welcome():
+def welcome(info):
     """Welcomes user by their name or asks for their name if it isn't known """
 
     try:
@@ -36,25 +36,25 @@ def welcome():
     except KeyError:
         name = str(input("Welcome to the program, what is your name?\n"))
         info['name'] = name
-        save_json()
+        save_json(info)
 
     
-def difficulty(x):
+def set_difficulty(info, task_name):
     """Sets a difficulty for a specific task"""
     while True:
         try:
             task_difficulty = int(input("Task difficulty 1-3: "))
             if 1 <= task_difficulty <= 3:
-                info[x] = task_difficulty
-                save_json()
+                info[task_name] = task_difficulty
+                save_json(info)
                 print("Task succesfully saved! ")
                 break
             else:
-                print("Difficulty level not valid! ")
+                print("Difficulty level not valid, valid numbers are 1-3 ")
         except ValueError:
-            continue
+            print("Difficulty level not valid, valid numbers are 1-3 ")
 
-def new_task():
+def new_task(info):
     """Asks for a task name from user and calls the difficulty function"""
 
     while True:
@@ -65,10 +65,10 @@ def new_task():
             print("Task already exists! ")
         else:
             break
-    difficulty(task_name)
+    set_difficulty(info, task_name)
 
 
-def list_tasks():
+def list_tasks(info):
     """Lists tasks stored in the JSON file sorted and colored by difficulty"""
 
     diff1, diff2, diff3 = [], [], []
@@ -95,7 +95,7 @@ def list_tasks():
     # resets color to default
     print(f"\u001b[0m")
 
-def modify_task():
+def modify_task(info):
     """User modifies an already existing task"""
 
     task = input("Task or name to modify: ")
@@ -104,20 +104,19 @@ def modify_task():
             name = input("Enter your new name: ")
             if name not in info:
                 info["name"] = name
-                save_json()
+                save_json(info)
                 print("Name succefully changed")
                 break
             else:
-                print("Name can't be called the same as a task! ")
-                continue
+                print("Name can't be the same as a task! ")
     elif task in info:
-        task_name = input("Renamed: ")
+        task_name = input("Enter a new task name: ")
         info[task_name] = info.pop(task)
-        difficulty(task_name)
+        set_difficulty(info, task_name)
     else:
         print("Task doesn't exist! ")
 
-def delete_task():
+def delete_task(info):
     """Deletes task from dictionary"""
 
     while True:
@@ -127,33 +126,33 @@ def delete_task():
             print("To change your name, select modify from the menu and enter 'name'. ")
         elif task in info:
             del info[task]
-            save_json()
+            save_json(info)
             print("Task succesfully deleted! ")
             break
         else:
             print("No such task exists")
 
-def main():
+def main(info):
     """Acts as a menu"""
 
-    welcome()
+    welcome(info)
     while True:
         choice = input("New task / List tasks / Modify / Delete / Exit: ").lower()
         if choice == "new" or choice == "new task":
-            new_task()
+            new_task(info)
         elif choice == "list" or choice == "list tasks":
-            list_tasks()
+            list_tasks(info)
         elif choice == "modify":
-            modify_task()
+            modify_task(info)
+        elif choice == "delete":
+            delete_task(info)
         elif choice == "exit":
             print("Exiting...")
             break
-        elif choice == "delete":
-            delete_task()
         else:
             print(f"Command unknown\n")
 
 
 if __name__ == "__main__":
-    main()
+    main(info)
 
