@@ -59,7 +59,9 @@ def new_task():
 
     while True:
         task_name = input("New task: ")
-        if task_name in info:
+        if task_name == "name":
+            print("Task cannot be named 'name'! ")
+        elif task_name in info:
             print("Task already exists! ")
         else:
             break
@@ -96,20 +98,47 @@ def list_tasks():
 def modify_task():
     """User modifies an already existing task"""
 
-    task = input("Task to modify: ")
-    if task in info.keys():
-        task_name = input("Rename task: ")
+    task = input("Task or name to modify: ")
+    if task == "name":
+        while True:
+            name = input("Enter your new name: ")
+            if name not in info:
+                info["name"] = name
+                save_json()
+                print("Name succefully changed")
+                break
+            else:
+                print("Name can't be called the same as a task! ")
+                continue
+    elif task in info:
+        task_name = input("Renamed: ")
         info[task_name] = info.pop(task)
         difficulty(task_name)
     else:
         print("Task doesn't exist! ")
+
+def delete_task():
+    """Deletes task from dictionary"""
+
+    while True:
+
+        task = input("What task would you like to remove? ")
+        if task == "name":
+            print("To change your name, select modify from the menu and enter 'name'. ")
+        elif task in info:
+            del info[task]
+            save_json()
+            print("Task succesfully deleted! ")
+            break
+        else:
+            print("No such task exists")
 
 def main():
     """Acts as a menu"""
 
     welcome()
     while True:
-        choice = input("New task / List tasks / Modify /  Exit: ").lower()
+        choice = input("New task / List tasks / Modify / Delete / Exit: ").lower()
         if choice == "new" or choice == "new task":
             new_task()
         elif choice == "list" or choice == "list tasks":
@@ -119,6 +148,8 @@ def main():
         elif choice == "exit":
             print("Exiting...")
             break
+        elif choice == "delete":
+            delete_task()
         else:
             print(f"Command unknown\n")
 
