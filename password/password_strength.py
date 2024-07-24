@@ -8,7 +8,7 @@ regex4 = re.compile(r'[0-9]')
 regexss = [regex1, regex2, regex3, regex4]
 
 
-def check(password):
+def check(password) -> bool:
     for regex in regexss:
         answer = regex.search(password)
 

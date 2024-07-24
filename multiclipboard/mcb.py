@@ -17,7 +17,7 @@ else:
     except json.JSONDecodeError:
         my_dict = {}
 
-def load_json():
+def load_json() -> dict:
     try:
         content = path.read_text()
         my_dict = json.loads(content)
@@ -30,7 +30,7 @@ def store_json():
     contents = json.dumps(my_dict)
     path.write_text(contents)
 
-def ask_input():
+def ask_input() -> str:
     x = input("save/list/exit: ")
     return x
 
@@ -38,32 +38,27 @@ def ask_input():
 def main():
 
     text = pyperclip.paste()
-    wish = ask_input()
     while True:
+        wish = ask_input()
 
         if "save" in wish:
             wish = wish.removeprefix("save ")
             my_dict[wish] = text
             print(my_dict)
             store_json()
-            wish = ask_input()
 
         elif "list" in wish:
             load_json()
-            wish = ask_input()
             
-
         elif "exit" in wish:
             print("Exiting...")
             sys.exit()
 
         elif wish in my_dict.keys():
             pyperclip.copy(my_dict[wish])
-            wish = ask_input()
 
         else:
             print("Function unavailable")
-            wish = ask_input()
 
 if __name__ == "__main__":
     main()

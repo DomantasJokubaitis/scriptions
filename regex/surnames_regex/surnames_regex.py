@@ -1,7 +1,8 @@
 import re
 import os
+from pathlib import Path
 
-path = "text_files"
+path = Path("regex\\surnames_regex\\text_files")
 
 regex = re.compile(r"\w+ič\b|\w+iv\b|\w+ij\b|\w+ov\b|\w+ev\b|\w+ik\b", re.IGNORECASE)
 
