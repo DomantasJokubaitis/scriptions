@@ -17,10 +17,11 @@ def main():
             full_old_path = os.path.join(path, item)
 
             am_date_list = am_date.split("-")
-            mm = am_date_list.pop(0)
-            am_date_list.insert(1, mm)
-            eu_date = "-".join(am_date_list)
-
+            if am_date_list[0] == am_date_list[1] or int(am_date_list[0]) > 12:
+                continue
+            mm, dd = am_date_list[0], am_date_list[1]
+            eu_date = f"{dd}-{mm}-{am_date_list[2]}"
+            
             new_filename = item.replace(am_date, eu_date)
             full_new_path = os.path.join(path, new_filename)
             os.rename(full_old_path, full_new_path)
@@ -30,6 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# make so if mm and dd is the same, they shouldm't be switches
-# implement maximum possible month and day numbers
