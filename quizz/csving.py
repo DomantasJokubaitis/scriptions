@@ -20,16 +20,16 @@ for s in range(0, 99, 2):
 for c in range(1, 100, 2):
     capitals.append(states_capitals_list[c]) 
 
-def logic():
+def logic() -> list:
 
     quiz, question_number, control = [], 1, list(range(50))
 
     while control:
 
         # makes a random question, appends true answer to an answer list
-        number = random.choice(control)
+        number: int = random.choice(control)
         control.remove(number)
-        question = f"{question_number}. What is the capital of {states[number]}?"
+        question: str = f"{question_number}. What is the capital of {states[number]}?"
         quiz.append(question)
         answers = []
         answers.append(capitals[number])
@@ -37,7 +37,7 @@ def logic():
         # chooses three random untrue answers from leftover states, appends them to an answer list, shuffles it
         answers_fill = list(range(50))
         answers_fill.remove(number)
-        fake_ans_num = random.sample(answers_fill, 3)
+        fake_ans_num: list = random.sample(answers_fill, 3)
         for o in fake_ans_num:  
             answers.append(capitals[o])
         random.shuffle(answers)
@@ -58,7 +58,7 @@ def main():
     for i in range(1, target+1):
         filename = f"quiz_number{i}"
         new_filename = os.path.join(path2, filename + ".txt")
-        quiz = logic()
+        quiz: list = logic()
         with open(new_filename, "w") as n:
             for item in quiz:
                 n.write(f"{item}\n")

@@ -5,13 +5,13 @@ dir_path = Path("yatdl")
 file_path = dir_path / "info.json"
 dir_path.mkdir(parents=True, exist_ok=True)
 
-def save_json(info):
+def save_json(info: dict) -> None:
     """Saves contents to a JSON file"""
 
     with open(file_path, "w") as f:
         json.dump(info, f)
 
-def load_json():
+def load_json() -> dict:
     """Loads json file from the file path"""
 
     try:
@@ -26,9 +26,9 @@ if not file_path.exists():
     info = {}
     save_json(info)
 else:
-    info = load_json()
+    info: dict = load_json()
 
-def welcome(info):
+def welcome(info) -> None:
     """Welcomes user by their name or asks for their name if it isn't known """
 
     try:
@@ -39,7 +39,7 @@ def welcome(info):
         save_json(info)
 
     
-def set_difficulty(info, task_name):
+def set_difficulty(info: dict, task_name) -> None:
     """Sets a difficulty for a specific task"""
     while True:
         try:
@@ -54,7 +54,7 @@ def set_difficulty(info, task_name):
         except ValueError:
             print("Difficulty level not valid, valid numbers are 1-3 ")
 
-def new_task(info):
+def new_task(info: dict) -> None:
     """Asks for a task name from user and calls the difficulty function"""
 
     while True:
@@ -68,7 +68,7 @@ def new_task(info):
     set_difficulty(info, task_name)
 
 
-def list_tasks(info):
+def list_tasks(info: dict) -> None:
     """Lists tasks stored in the JSON file sorted and colored by difficulty"""
 
     diff1, diff2, diff3 = [], [], []
@@ -95,7 +95,7 @@ def list_tasks(info):
     # resets color to default
     print(f"\u001b[0m")
 
-def modify_task(info):
+def modify_task(info: dict) ->  None:
     """User modifies an already existing task"""
 
     task = input("Task or name to modify: ")
@@ -116,7 +116,7 @@ def modify_task(info):
     else:
         print("Task doesn't exist! ")
 
-def delete_task(info):
+def delete_task(info: dict) -> None:
     """Deletes task from dictionary"""
 
     while True:
@@ -132,12 +132,12 @@ def delete_task(info):
         else:
             print("No such task exists")
 
-def main(info):
+def main(info: dict):
     """Acts as a menu"""
 
     welcome(info)
     while True:
-        choice = input("New task / List tasks / Modify / Delete / Exit: ").lower()
+        choice: str = input("New task / List tasks / Modify / Delete / Exit: ").lower()
         if choice == "new" or choice == "new task":
             new_task(info)
         elif choice == "list" or choice == "list tasks":
@@ -150,7 +150,7 @@ def main(info):
             print("Exiting...")
             break
         else:
-            print(f"Command unknown\n")
+            print("Command unknown")
 
 
 if __name__ == "__main__":

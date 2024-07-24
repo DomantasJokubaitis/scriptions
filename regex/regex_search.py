@@ -9,7 +9,7 @@ files = os.listdir(path)
 
 full_paths, surnames = [], []
 
-def find_surnames():
+def find_surnames() -> list:
     for file in files:
         full_path = os.path.join(path, file)
         full_paths.append(full_path)
