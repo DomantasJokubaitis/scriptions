@@ -3,9 +3,9 @@
 import re, random, os
 from pathlib import Path
 
-path1 = Path("us_quiz\\untidycapitals.txt")
+file_path = Path("untidycapitals.txt")
 
-with open(path1, "r") as f:
+with open(file_path, "r") as f:
     text = f.read()
 
 regex = re.compile(r'\S[a-zA-Z]+\s?[a-zA-Z]+\s?[A-Za-z]+?\b')
@@ -51,12 +51,14 @@ def logic() -> list:
     return quiz
 
 def main():
+    
+    quiz_dir = Path("generated_quizes")
+    quiz_dir.mkdir(parents=True, exist_ok=True)
 
-    path2 = "us_quiz\\"
     target = int(input("How many quizes would you like prepared? "))
     for i in range(1, target+1):
-        filename = f"quiz_number{i}"
-        new_filename = os.path.join(path2, filename + ".txt")
+        filename = f"quiz_number{i}.txt"
+        new_filename = (quiz_dir / filename)
         quiz: list = logic()
         with open(new_filename, "w") as n:
             for item in quiz:
