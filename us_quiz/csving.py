@@ -1,9 +1,11 @@
 ### program which extracts US's states and capitals from a text file using regex and makes 35 random quizes with 50 random questions each
 
-import re, random, os
+import re, random
 from pathlib import Path
 
-file_path = Path("untidycapitals.txt")
+dir_path = Path("us_quiz")
+file_path = dir_path / "untidycapitals.txt"
+dir_path.mkdir(parents=True, exist_ok=True)
 
 with open(file_path, "r") as f:
     text = f.read()
@@ -52,8 +54,8 @@ def logic() -> list:
 
 def main():
     
-    quiz_dir = Path("generated_quizes")
-    quiz_dir.mkdir(parents=True, exist_ok=True)
+    quiz_dir = Path("generated_quizes")             # path to folder where the 
+    quiz_dir.mkdir(parents=True, exist_ok=True)     # generated quizes are stored
 
     target = int(input("How many quizes would you like prepared? "))
     for i in range(1, target+1):
