@@ -3,9 +3,7 @@
 import re, random
 from pathlib import Path
 
-dir_path = Path("us_quiz")
-file_path = dir_path / "untidycapitals.txt"
-dir_path.mkdir(parents=True, exist_ok=True)
+file_path = "untidycapitals.txt"
 
 with open(file_path, "r") as f:
     text = f.read()
