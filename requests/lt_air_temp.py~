@@ -4,7 +4,7 @@ import requests, bs4, unicodedata, sys
 def temp_lookup(city: str) -> str:
     """get's the outside temperature of a city in Lithuania"""
 
-    unicode_city = unicodedata.normalize("NFD", city).encode("ascii", "ignore").decode("ascii").lower()
+    unicode_city: str = unicodedata.normalize("NFD", city).encode("ascii", "ignore").decode("ascii").lower()
     website = f"https://www.meteo.lt/?area={unicode_city}" 
     raw_data = requests.get(website, params = {"city" : unicode_city})
     raw_data.raise_for_status()
