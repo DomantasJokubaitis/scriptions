@@ -26,7 +26,7 @@ def main():
             full_new_path = os.path.join(path, new_filename)
             os.rename(full_old_path, full_new_path)
 
-            print(f"renamed {full_old_path} to {full_new_path}")
+            print(f"Renamed {full_old_path} to {full_new_path}")
 
 
 if __name__ == "__main__":
