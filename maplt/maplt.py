@@ -6,6 +6,7 @@ if len(args) > 2:
 else:
     print("Address too short")
     sys.exit()
+
 google_maps = "https://www.google.com/maps/place/"
 
 new_address = ("+".join(args[1:])).replace(",", "")
